@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widget Chat</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+</head>
+<body>
+    <button class="open-button btn-lg" onclick="toggleForm()">
+        <span class="material-icons">
+            chat
+        </span>
+        <span class="badge">99+</span>
+        Chat
+    </button>
+    <div class="container-upload-file col-lg-3 col-sm-11 h-75 p-2 d-flex justify-content-center align-items-center" id="myForm">
+        <div class="drag-area w-100 h-75 d-flex flex-column align-items-center justify-content-center rounded">
+            <div class="icon material-icons">cloud_upload</i></div>
+            <header class="h5">Drag & Drop to Upload File</header>
+            <span class="h5">OR</span>
+            <button class="h5 p-2 rounded btn-browse">Browse File</button>
+            <input type="file" hidden class="input-browse">
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
