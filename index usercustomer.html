@@ -20,7 +20,7 @@
     
 </head>
 <body>
-    <button class="open-button btn-lg" onclick="toggleForm()">
+    <button class="open-button btn-lg" onclick="toggleFormUser()">
         <span class="material-icons">
             chat
         </span>
@@ -60,9 +60,19 @@
                 </div>
             </div>
 
+            <div class="drag-area flex-column align-items-center justify-content-center rounded">
+                <div class="icon material-icons">cloud_upload</i></div>
+                <header class="h5">Drag & Drop to Upload File</header>
+                <span class="h5">OR</span>
+                <button class="h5 p-2 rounded btn-browse">Browse File</button>
+                <input type="file" hidden class="input-browse">
+            </div>
+
+            
+
             <div class="container-fluid bottom-container px-0 align-items-center justify-content-center row">
                 <div class="col-2 p-1 pl-2 text-right">
-                    <button type="button" class="c-blue-btn rounded-circle">+</button>
+                    <button type="button" class="c-blue-btn rounded-circle" onclick="showAttach()">+</button>
                 </div>
                 <div class="col-9 p-1 text-left">
                     <input type="text" name="msg" id="msg" placeholder="Type your message" class="msg w-100">

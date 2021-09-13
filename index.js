@@ -1,6 +1,10 @@
 let file; //variabel global untuk menangani file
+const dropArea = document.querySelector(".drag-area")
+const dragText = document.querySelector("header")
+const button = document.querySelector(".btn-browse")
+const input = document.querySelector(".input-browse")
 
-toggleForm = () => {
+toggleFormUser = () => {
     if (document.getElementById('myForm').style.display === "none") {
         document.getElementById('myForm').style.display = "flex";
     } else {
@@ -8,10 +12,26 @@ toggleForm = () => {
     }
 }
 
-const dropArea = document.querySelector(".drag-area")
-const dragText = document.querySelector("header")
-const button = document.querySelector(".btn-browse")
-const input = document.querySelector(".input-browse")
+toggleFormAdmin = () => {
+    if (document.querySelector('.container-admin').style.display === "none") {
+        document.querySelector('.container-admin').style.display = "flex"
+    } else {
+        document.querySelector('.container-admin').style.display = "none";
+    }
+}
+
+showAttach = () => {
+    if (dropArea.style.display === "none") {
+        document.querySelector('.chat-buble-container').style.display = "none"
+        dropArea.style.display = "flex"
+    } else {
+        document.querySelector('.chat-buble-container').style.display = "block"
+        dropArea.style.display = "none"
+    }
+    
+}
+
+
 
 button.onclick = () => {
     input.click()
