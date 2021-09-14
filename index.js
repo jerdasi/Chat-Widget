@@ -12,6 +12,38 @@ toggleFormUser = () => {
     }
 }
 
+sendMessage = () => {
+    let message = document.getElementById('msg').value 
+    let time = moment().calendar();
+
+    let html = `<div class="chat-buble p-0 mb-2 text-right">
+        <span class="time-message text-left">${time}</span>
+        <span class="text-buble">
+            ${message}
+        </span>
+    </div>`
+
+    document.querySelector('.chat-buble-container').innerHTML += html
+
+    document.getElementById('msg').value = ""
+
+    let elem = document.querySelector('.typing')
+    elem.remove()
+}
+
+showTyping = () => {
+    let html = `<div class="chat-buble p-0 mb-2 text-right typing">
+    <span class="time-message text-left">${moment().calendar()}</span>
+    <span class="text-buble">
+        <span class="messages__dot"></span>
+        <span class="messages__dot"></span>
+        <span class="messages__dot"></span>
+    </span>
+    </div>`
+
+    document.querySelector('.chat-buble-container').innerHTML += html
+}
+
 toggleFormAdmin = () => {
     if (document.querySelector('.container-admin').style.display === "none") {
         document.querySelector('.container-admin').style.display = "flex"

@@ -129,8 +129,8 @@ body{
 }
 
 .chat-buble{
-    width: 100%;
     margin-bottom: 2%;
+    width: 100%;
 }
 
 
@@ -140,13 +140,15 @@ body{
     font-size: 10px;
 }
 
-.text-buble-left{
-    min-height: 10%;
-    min-width: none;
+
+.text-buble{
     background-color: #F3F6F9;
     border-radius: 10px;
     font-size: 12px;
     padding: 2%;
+    display: inline-block;
+    max-width: 70%;
+    word-wrap: break-word;
 }
 
 .text-buble-right{
@@ -172,6 +174,7 @@ body{
     width: 35px;
     height: 35px;
     cursor: pointer;
+    border: none;
 }
 
 .input-group {
@@ -246,4 +249,31 @@ body{
     background-color: #fff;
     color: #5256ad;
     cursor: pointer;
+}
+
+/* Typing Styling */
+
+span.messages__dot {
+    height: 10px;
+    width: 10px;
+    float: left;
+    margin: 0 1px;
+    background-color: #9e9ea1;
+    display: block;
+    border-radius: 50%;
+    opacity: 0.4;
+    animation: 1s blink infinite;
+    font-size: 12px;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes bulge {
+    50% {
+        transform: scale(1.05);
+    }
 }
